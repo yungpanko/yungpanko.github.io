@@ -59,9 +59,14 @@ Let me demonstrate.</p>
 <span class="n">a</span> <span class="o">||=</span> <span class="n">b</span> <span class="c1">#=&gt; 2</span>
 <span class="n">a</span> <span class="c1">#=&gt; 2</span></code></pre></figure>
 
-<p>In the example above, a retains its original value even though it has been operated on through our “double-pipe equals”. This happens because the || acts as a “circuit” in this method. As Peter Cooper explains,</p>
+<p>In the example above, a retains its original value even though it has been operated on through our “double-pipe equals”. This happens because the || acts as a “circuit” in this method. As <a href="http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html">Peter Cooper</a> explains,</p>
 
-<p>If the left hand side of the comparison is true, there’s no need to check the right hand side. When ruby saw that a was already assigned to the value of 2, it stopped executing our code. Where I have found this sort of conditional assignment most useful is in iteration. Let’s iterate through an array of popular fruits, using our ||= method to assign each of the strings to a.</p>
+<blockquote>
+  <p>If the left hand side of the comparison is true, there’s no need to check the right hand side.
+When ruby saw that a was already assigned to the value of 2, it stopped executing our code. Where I have
+found this sort of conditional assignment most useful is in iteration. Let’s iterate through an array of
+popular fruits, using our ||= method to assign each of the strings to a.</p>
+</blockquote>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="kp">nil</span>
 <span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span><span class="s2">"orange"</span><span class="p">,</span><span class="s2">"banana"</span><span class="p">]</span>

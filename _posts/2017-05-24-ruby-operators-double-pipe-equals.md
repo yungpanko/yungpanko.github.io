@@ -38,9 +38,12 @@ a ||= b #=> 2
 a #=> 2
 {% endhighlight %}
 
-In the example above, a retains its original value even though it has been operated on through our “double-pipe equals”. This happens because the \|\| acts as a “circuit” in this method. As Peter Cooper explains,
+In the example above, a retains its original value even though it has been operated on through our “double-pipe equals”. This happens because the \|\| acts as a “circuit” in this method. As [Peter Cooper](http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html) explains,
 
-If the left hand side of the comparison is true, there's no need to check the right hand side. When ruby saw that a was already assigned to the value of 2, it stopped executing our code. Where I have found this sort of conditional assignment most useful is in iteration. Let’s iterate through an array of popular fruits, using our \|\|= method to assign each of the strings to a.
+> If the left hand side of the comparison is true, there's no need to check the right hand side.
+> When ruby saw that a was already assigned to the value of 2, it stopped executing our code. Where I have
+> found this sort of conditional assignment most useful is in iteration. Let’s iterate through an array of
+> popular fruits, using our \|\|= method to assign each of the strings to a.
 
 {% highlight ruby %}
 a = nil
