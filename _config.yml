@@ -16,8 +16,8 @@
 title: Jared Johnson
 email: jrjohns@mit.edu
 description: > # this means to ignore newlines until "baseurl:"
-  This is a short teaser bio about me.
-  This is a new line.
+  Tech and Public Policy are on a collision course.
+  I'm working to mitigate the damage.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jared-johnson.com/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yungpanko

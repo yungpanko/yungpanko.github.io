@@ -4,29 +4,46 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+    <title>{{ site.title | default: site.github.repository_name }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   </head>
 
   <body>
     <div class="wrapper">
       <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <a href="/"><h1>{{ site.title | default: site.github.repository_name }}</h1></a>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <p class="view"><a href="https://twitter.com/{{site.twitter_username}}" target="_blank">Follow me on Twitter</a></p>
-        <p><a href="https://github.com/{{site.github_username}}" target="_blank">GitHub Link</a></p>
-        <p><a href="https://linkedin.com/in/{{site.linkedin_username}}" target="_blank">LinkedIn Link</a></p>
+        <p class="view">I tweet often so feel free to follow <a href="https://twitter.com/{{site.twitter_username}}" target="_blank">@yungpanko</a>.</p>
+        <p>See my projects on <a href="https://github.com/{{site.github_username}}" target="_blank">GitHub</a>.</p>
+        <p>See my professionals on <a href="https://linkedin.com/in/{{site.linkedin_username}}" target="_blank">LinkedIn</a>.</p>
       </header>
       <section>
+
+        <h1 id="header-1"><a href="#header-1"></a>About</h1>
 
         <p>Lead sentence. I am currently a graduate student at MIT and Harvard</p>
 
         <p>Previously, I worked as a business manager at <a href="https://jpmorganfunds.com" target="_blank">J.P. Morgan Asset Management</a>.</p>
+
+
+        <br>
+        <h1 id="header-1"><a href="#header-1"></a>Blog Posts</h1>
+        <ul>
+          {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
 
 
         <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
@@ -37,7 +54,6 @@
 
         <p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
 
-        <h1 id="header-1"><a href="#header-1"></a>Header 1</h1>
 
         <p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
 
