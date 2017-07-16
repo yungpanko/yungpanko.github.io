@@ -1,31 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-16T16:23:19-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
-</subtitle><entry><title type="html">Ruby Operators: Double Pipe Equals</title><link href="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html" rel="alternate" type="text/html" title="Ruby Operators: Double Pipe Equals" /><published>2017-05-24T00:00:00-04:00</published><updated>2017-05-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals</id><content type="html" xml:base="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html">&lt;h3 id=&quot;hey-what-does-that--mean-in-your-ruby-code&quot;&gt;“Hey, what does that ||= mean in your ruby code?”&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-16T18:05:04-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
+</subtitle><entry><title type="html">Quit being difficult and just tell me what the hell a closure is</title><link href="http://localhost:4000/2017/07/02/quit-being-difficult.html" rel="alternate" type="text/html" title="Quit being difficult and just tell me what the hell a closure is" /><published>2017-07-02T00:00:00-04:00</published><updated>2017-07-02T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/02/quit-being-difficult</id><content type="html" xml:base="http://localhost:4000/2017/07/02/quit-being-difficult.html">&lt;blockquote&gt;
+  &lt;p&gt;functions in JavaScript form closures. A closure is the combination of a function and the lexical
+environment within which that function was declared. (Mozilla Developer Network)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Great. We can all go home now.&lt;/p&gt;
+
+&lt;p&gt;…..I’m kidding.&lt;/p&gt;
+
+&lt;p&gt;We’re going to look at some code but let’s break down what this definition is trying to tell us. &lt;em&gt;“a function is a closure”&lt;/em&gt; — cool — , and &lt;em&gt;“a closure is the combination of a function and the lexical environment within which that function was declared.”&lt;/em&gt; This means that functions in JavaScript are more aware of their surrounding than functions or methods in other languages that do not have closures. JavaScript functions are familiar with the variables that exist in the environment where we create them.&lt;/p&gt;
+
+&lt;p&gt;If you employ the services of google to help you understand what a closure is, you will likely come across code examples with nested functions. There is a valid reason for this, as these functions help to demonstrate how different environments can change our closures, but the definition above explains that &lt;strong&gt;ALL&lt;/strong&gt; functions are closures. We don’t have to get fancy to explain what the hell this thing really is.&lt;/p&gt;
+
+&lt;p&gt;In my first example, I am declaring a variable, &lt;em&gt;name&lt;/em&gt;, with the value of my name. Then, I am writing a function, &lt;em&gt;printName&lt;/em&gt;, that console logs the name variable that I declared above it. If you test this out yourself, you will see that it works.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd1.png&quot; alt=&quot;img1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It may seem obvious that this works but — look closely — we never called our &lt;em&gt;printName&lt;/em&gt; function with an argument. What’s remarkable about what this function is doing is the very thing that makes it a closure. Our function was able to grab the name variable declared outside of itself, and within the global environment, to complete our operation.&lt;/p&gt;
+
+&lt;h2 id=&quot;now-we-understand-what-a-closure-is-but-how-and-why-would-we-use-it&quot;&gt;Now we understand what a closure is but how and why would we use it?&lt;/h2&gt;
+&lt;h3 id=&quot;private-methods-and-module-pattern&quot;&gt;Private methods and module pattern&lt;/h3&gt;
+
+&lt;p&gt;I’m going to cover two examples where your newfound understanding of closures can help. The first is private methods. A private method in JavaScript is a function that can only be accessed through another function. A quick example is below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd2.png&quot; alt=&quot;img2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, I have defined a function, &lt;em&gt;publicFunction&lt;/em&gt;, that returns another function, secretFunction. Both of these functions are closures, by definition, but only &lt;em&gt;publicFunction&lt;/em&gt; can be readily called by itself. When we try to console log our &lt;em&gt;secretFunction&lt;/em&gt;, we are told that it is not defined.
+In &lt;em&gt;publicFunction&lt;/em&gt;, I have employed a syntax that will be familiar if you have dealt with objects in JavaScript. By writing the return for &lt;em&gt;publicFunction&lt;/em&gt; as &lt;em&gt;“function name: function,”&lt;/em&gt; or in module pattern, we are able to call the inner function by chaining our call, similar to how we would retrieve attributes from an object. Let’s see that in action.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd3.png&quot; alt=&quot;img3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript’s use of closures allows us to hide our secretFunction from the rest of our global scope and even reuse the name in other functions.&lt;/p&gt;
+
+&lt;h3 id=&quot;partial-application-and-currying&quot;&gt;Partial application and currying&lt;/h3&gt;
+
+&lt;p&gt;Understanding closures is also important for understanding the mechanics of partial application and currying. When we pass arguments into functions that return functions, our return functions, or closures, are aware of these arguments.&lt;/p&gt;
+
+&lt;p&gt;Let’s examine the code below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd4.png&quot; alt=&quot;img4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, I am defining a function, &lt;em&gt;multiplyNumbers&lt;/em&gt;, that accepts two numbers and returns their product. I have written this function to return another function in the case that it only receives one argument. This return function, or closure, can access the first variable that we gave our outer function, &lt;em&gt;multiplyNumbers&lt;/em&gt;, and complete our operation. At the bottom of the screenshot, you can see that both ways (passing both arguments into the outer function AND passing the first argument to the outer function and the second to the inner function) return the same result.&lt;/p&gt;
+
+&lt;p&gt;We can supply our outer function only one argument and name the resulting function (see below).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd5.png&quot; alt=&quot;img5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I believe that the power of closures truly shines here. Our named methods, &lt;em&gt;multiplyByFive&lt;/em&gt; and &lt;em&gt;multiplyByFour&lt;/em&gt;, were birthed by the same function, &lt;em&gt;multiplyNumbers&lt;/em&gt;. They only differ in the environment scope that they refer to. The first argument for &lt;em&gt;multiplyByFive&lt;/em&gt; is still 5, even after the creation of an additional function, &lt;em&gt;multiplyByFour&lt;/em&gt;, that takes in a different first argument. Pretty cool, right?&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading this. I hope you’ve learned that functions in JavaScript can be more than meets the eye. Below are additional resources on closures and how understanding them becomes useful in functional programming.&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional resources:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36&quot;&gt;Master the JavaScript Interview: What is a Closure?&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures&quot;&gt;MDN: Closures&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc&quot;&gt;JavaScript Modules: A Beginner’s Guide&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">functions in JavaScript form closures. A closure is the combination of a function and the lexical environment within which that function was declared. (Mozilla Developer Network)</summary></entry><entry><title type="html">Ruby Operators: Double Pipe Equals</title><link href="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html" rel="alternate" type="text/html" title="Ruby Operators: Double Pipe Equals" /><published>2017-05-24T00:00:00-04:00</published><updated>2017-05-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals</id><content type="html" xml:base="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html">&lt;h2 id=&quot;hey-what-does-that--mean-in-your-ruby-code&quot;&gt;&lt;em&gt;“Hey, what does that ||= mean in your ruby code?”&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;In my first blog post as a programmer, I thought it would be appropriate to explain one of the questions that I was asked during my first day at &lt;a href=&quot;https://flatironschool.com/&quot;&gt;Flatiron School&lt;/a&gt;. This is a question that I had come up about a month ago and one that led me down a rabbit hole of ruby forums and reddit posts (I’ll save you the trouble and link a few of the better sources at the bottom of this post).&lt;/p&gt;
 
-&lt;p&gt;The controversy behind “double-pipe equals” is centered around how the operator should be translated but I’d like to focus this post on the applications that I have found for it. So, what exactly does ||= do? My own definition is that “double-pipe equals” is an operator that assigns a value, much like = or our classic assignment operator, but will only complete the assignment if the left side of our operation returns false or nil.
-Let me demonstrate.&lt;/p&gt;
+&lt;p&gt;The controversy behind “double-pipe equals” is centered around how the operator should be translated but I’d like to focus this post on the applications that I have found for it. So, what exactly does &lt;em&gt;||=&lt;/em&gt; do? My own definition is that &lt;em&gt;“double-pipe equals”&lt;/em&gt; is an operator that assigns a value, much like &lt;em&gt;=&lt;/em&gt; or our classic assignment operator, but will only complete the assignment if the left side of our operation returns false or nil.&lt;/p&gt;
+
+&lt;p&gt;Let me demonstrate.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 4&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;With a set to nil, it is easy to see that setting a “equal” to b using the classic assignment operator would return a with the value of 4. But what if we used “double-pipe equals” instead?&lt;/p&gt;
+&lt;p&gt;With a set to nil, it is easy to see that setting a &lt;em&gt;“equal”&lt;/em&gt; to b using the classic assignment operator would return a with the value of 4. But what if we used &lt;em&gt;“double-pipe equals”&lt;/em&gt; instead?&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 4&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;In this case, we get the same result. When a is set to nil (or anything that evaluates to false), the ||= operator functions the same as = would. Let’s look at an example where a is given a “truthy” value.&lt;/p&gt;
+&lt;p&gt;In this case, we get the same result. When a is set to nil (or anything that evaluates to false), the &lt;em&gt;||=&lt;/em&gt; operator functions the same as &lt;em&gt;=&lt;/em&gt; would. Let’s look at an example where a is given a &lt;em&gt;“truthy”&lt;/em&gt; value.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 2&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;In the example above, a retains its original value even though it has been operated on through our “double-pipe equals”. This happens because the || acts as a “circuit” in this method. As &lt;a href=&quot;http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html&quot;&gt;Peter Cooper&lt;/a&gt; explains,&lt;/p&gt;
+&lt;p&gt;In the example above, a retains its original value even though it has been operated on through our &lt;em&gt;“double-pipe equals”&lt;/em&gt;. This happens because the &lt;em&gt;||&lt;/em&gt; acts as a &lt;em&gt;“circuit”&lt;/em&gt; in this method. As &lt;a href=&quot;http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html&quot;&gt;Peter Cooper&lt;/a&gt; explains,&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;If the left hand side of the comparison is true, there’s no need to check the right hand side.
@@ -41,8 +105,9 @@ popular fruits, using our ||= method to assign each of the strings to a.&lt;/p&g
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; [&quot;apple&quot;,&quot;orange&quot;,&quot;banana&quot;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; &quot;apple&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;We can see that, after our iteration, a is assigned to the first string in our array, “apple” . After a becomes “apple”, our “double-pipe equals” will not let anything to the right of it reassign our variable.
-While ruby has methods that can return the first element of an array without iteration, it can sometimes be useful to control for whether or not a variable has been assigned with a “truthy” value. Below is a code snippet from one of my recent labs where I found ||= particularly useful.&lt;/p&gt;
+&lt;p&gt;We can see that, after our iteration, a is assigned to the first string in our array, &lt;em&gt;“apple”&lt;/em&gt; . After a becomes &lt;em&gt;“apple”&lt;/em&gt;, our &lt;em&gt;“double-pipe equals”&lt;/em&gt; will not let anything to the right of it reassign our variable.&lt;/p&gt;
+
+&lt;p&gt;While ruby has methods that can return the first element of an array without iteration, it can sometimes be useful to control for whether or not a variable has been assigned with a &lt;em&gt;“truthy”&lt;/em&gt; value. Below is a code snippet from one of my recent labs where I found &lt;em&gt;||=&lt;/em&gt; particularly useful.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;School&lt;/span&gt;
   &lt;span class=&quot;kp&quot;&gt;attr_reader&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:roster&lt;/span&gt;
@@ -56,8 +121,9 @@ While ruby has methods that can return the first element of an array without ite
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Here, I have defined a class, School, along with a couple of methods. The key thing to understand is that by calling roster on an instance of my School class, I am looking to return my list of students as a hash of grades pointing to an array of students associated with each grade.
-Lets instantiate an example school and populate some students.&lt;/p&gt;
+&lt;p&gt;Here, I have defined a class, &lt;em&gt;School&lt;/em&gt;, along with a couple of methods. The key thing to understand is that by calling &lt;em&gt;roster&lt;/em&gt; on an instance of my &lt;em&gt;School&lt;/em&gt; class, I am looking to return my list of students as a hash of grades pointing to an array of students associated with each grade.&lt;/p&gt;
+
+&lt;p&gt;Lets instantiate an example school and populate some students.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;metro&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;School&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Metro High&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;metro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Jared&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -65,11 +131,15 @@ Lets instantiate an example school and populate some students.&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;metro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Graham&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;metro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;roster&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; {9=&amp;gt;[&quot;Jared&quot;,&quot;Graham&quot;]}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;To add a student to the roster of my School instance, I have to pass the add_student method a name and a grade. However, we can see that when I added “Graham” and his corresponding grade, 9, his name was added to the existing array that was created when I added “Jared”. This is the magic of ||=. In this case, the “double-pipe equals” operator recognized that a grade key has already been added and
-Had my add_student method used = instead of ||=, I would have overwritten my student entry “Jared” when I added another student in grade 9.&lt;/p&gt;
+&lt;p&gt;To add a student to the roster of my &lt;em&gt;School&lt;/em&gt; instance, I have to pass the &lt;em&gt;add_student&lt;/em&gt; method a name and a grade. However, we can see that when I added &lt;em&gt;“Graham”&lt;/em&gt; and his corresponding grade, &lt;em&gt;9&lt;/em&gt;, his name was added to the existing array that was created when I added &lt;em&gt;“Jared”&lt;/em&gt;. This is the magic of &lt;em&gt;||=&lt;/em&gt;. In this case, the &lt;em&gt;“double-pipe equals”&lt;/em&gt; operator recognized that a grade key has already been added and had my add_student method used &lt;em&gt;=&lt;/em&gt; instead of &lt;em&gt;||=&lt;/em&gt;, I would have overwritten my student entry &lt;em&gt;“Jared”&lt;/em&gt; when I added another student in grade &lt;em&gt;9&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Additional resources:&lt;/p&gt;
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional resources:&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html&quot;&gt;What Ruby’s Double Pipe / Or Equals Really Does&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ruby-forum.com/topic/151660/&quot;&gt;The definitive list of OR Equal threads and pages&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“Hey, what does that ||= mean in your ruby code?”</summary></entry></feed>
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html&quot;&gt;What Ruby’s Double Pipe / Or Equals Really Does&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.ruby-forum.com/topic/151660/&quot;&gt;The definitive list of OR Equal threads and pages&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">“Hey, what does that ||= mean in your ruby code?”</summary></entry></feed>

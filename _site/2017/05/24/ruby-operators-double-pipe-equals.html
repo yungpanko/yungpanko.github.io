@@ -33,33 +33,34 @@
         <h1>Ruby Operators: Double Pipe Equals</h1>
         <p>24 May 2017</p>
 
-        <h3 id="hey-what-does-that--mean-in-your-ruby-code">“Hey, what does that ||= mean in your ruby code?”</h3>
+        <h2 id="hey-what-does-that--mean-in-your-ruby-code"><em>“Hey, what does that ||= mean in your ruby code?”</em></h2>
 
 <p>In my first blog post as a programmer, I thought it would be appropriate to explain one of the questions that I was asked during my first day at <a href="https://flatironschool.com/">Flatiron School</a>. This is a question that I had come up about a month ago and one that led me down a rabbit hole of ruby forums and reddit posts (I’ll save you the trouble and link a few of the better sources at the bottom of this post).</p>
 
-<p>The controversy behind “double-pipe equals” is centered around how the operator should be translated but I’d like to focus this post on the applications that I have found for it. So, what exactly does ||= do? My own definition is that “double-pipe equals” is an operator that assigns a value, much like = or our classic assignment operator, but will only complete the assignment if the left side of our operation returns false or nil.
-Let me demonstrate.</p>
+<p>The controversy behind “double-pipe equals” is centered around how the operator should be translated but I’d like to focus this post on the applications that I have found for it. So, what exactly does <em>||=</em> do? My own definition is that <em>“double-pipe equals”</em> is an operator that assigns a value, much like <em>=</em> or our classic assignment operator, but will only complete the assignment if the left side of our operation returns false or nil.</p>
+
+<p>Let me demonstrate.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="kp">nil</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="c1">#=&gt; 4</span>
 <span class="n">a</span> <span class="c1">#=&gt; 4</span></code></pre></figure>
 
-<p>With a set to nil, it is easy to see that setting a “equal” to b using the classic assignment operator would return a with the value of 4. But what if we used “double-pipe equals” instead?</p>
+<p>With a set to nil, it is easy to see that setting a <em>“equal”</em> to b using the classic assignment operator would return a with the value of 4. But what if we used <em>“double-pipe equals”</em> instead?</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="kp">nil</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">a</span> <span class="o">||=</span> <span class="n">b</span> <span class="c1">#=&gt; 4</span>
 <span class="n">a</span> <span class="c1">#=&gt; 4</span></code></pre></figure>
 
-<p>In this case, we get the same result. When a is set to nil (or anything that evaluates to false), the ||= operator functions the same as = would. Let’s look at an example where a is given a “truthy” value.</p>
+<p>In this case, we get the same result. When a is set to nil (or anything that evaluates to false), the <em>||=</em> operator functions the same as <em>=</em> would. Let’s look at an example where a is given a <em>“truthy”</em> value.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">a</span> <span class="o">||=</span> <span class="n">b</span> <span class="c1">#=&gt; 2</span>
 <span class="n">a</span> <span class="c1">#=&gt; 2</span></code></pre></figure>
 
-<p>In the example above, a retains its original value even though it has been operated on through our “double-pipe equals”. This happens because the || acts as a “circuit” in this method. As <a href="http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html">Peter Cooper</a> explains,</p>
+<p>In the example above, a retains its original value even though it has been operated on through our <em>“double-pipe equals”</em>. This happens because the <em>||</em> acts as a <em>“circuit”</em> in this method. As <a href="http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html">Peter Cooper</a> explains,</p>
 
 <blockquote>
   <p>If the left hand side of the comparison is true, there’s no need to check the right hand side.
@@ -75,8 +76,9 @@ popular fruits, using our ||= method to assign each of the strings to a.</p>
 <span class="k">end</span> <span class="c1">#=&gt; ["apple","orange","banana"]</span>
 <span class="n">a</span> <span class="c1">#=&gt; "apple"</span></code></pre></figure>
 
-<p>We can see that, after our iteration, a is assigned to the first string in our array, “apple” . After a becomes “apple”, our “double-pipe equals” will not let anything to the right of it reassign our variable.
-While ruby has methods that can return the first element of an array without iteration, it can sometimes be useful to control for whether or not a variable has been assigned with a “truthy” value. Below is a code snippet from one of my recent labs where I found ||= particularly useful.</p>
+<p>We can see that, after our iteration, a is assigned to the first string in our array, <em>“apple”</em> . After a becomes <em>“apple”</em>, our <em>“double-pipe equals”</em> will not let anything to the right of it reassign our variable.</p>
+
+<p>While ruby has methods that can return the first element of an array without iteration, it can sometimes be useful to control for whether or not a variable has been assigned with a <em>“truthy”</em> value. Below is a code snippet from one of my recent labs where I found <em>||=</em> particularly useful.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">School</span>
   <span class="kp">attr_reader</span> <span class="ss">:roster</span>
@@ -90,8 +92,9 @@ While ruby has methods that can return the first element of an array without ite
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
-<p>Here, I have defined a class, School, along with a couple of methods. The key thing to understand is that by calling roster on an instance of my School class, I am looking to return my list of students as a hash of grades pointing to an array of students associated with each grade.
-Lets instantiate an example school and populate some students.</p>
+<p>Here, I have defined a class, <em>School</em>, along with a couple of methods. The key thing to understand is that by calling <em>roster</em> on an instance of my <em>School</em> class, I am looking to return my list of students as a hash of grades pointing to an array of students associated with each grade.</p>
+
+<p>Lets instantiate an example school and populate some students.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">metro</span> <span class="o">=</span> <span class="no">School</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Metro High"</span><span class="p">)</span>
 <span class="n">metro</span><span class="p">.</span><span class="nf">add_student</span><span class="p">(</span><span class="s2">"Jared"</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
@@ -99,14 +102,18 @@ Lets instantiate an example school and populate some students.</p>
 <span class="n">metro</span><span class="p">.</span><span class="nf">add_student</span><span class="p">(</span><span class="s2">"Graham"</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="n">metro</span><span class="p">.</span><span class="nf">roster</span> <span class="c1">#=&gt; {9=&gt;["Jared","Graham"]}</span></code></pre></figure>
 
-<p>To add a student to the roster of my School instance, I have to pass the add_student method a name and a grade. However, we can see that when I added “Graham” and his corresponding grade, 9, his name was added to the existing array that was created when I added “Jared”. This is the magic of ||=. In this case, the “double-pipe equals” operator recognized that a grade key has already been added and
-Had my add_student method used = instead of ||=, I would have overwritten my student entry “Jared” when I added another student in grade 9.</p>
+<p>To add a student to the roster of my <em>School</em> instance, I have to pass the <em>add_student</em> method a name and a grade. However, we can see that when I added <em>“Graham”</em> and his corresponding grade, <em>9</em>, his name was added to the existing array that was created when I added <em>“Jared”</em>. This is the magic of <em>||=</em>. In this case, the <em>“double-pipe equals”</em> operator recognized that a grade key has already been added and had my add_student method used <em>=</em> instead of <em>||=</em>, I would have overwritten my student entry <em>“Jared”</em> when I added another student in grade <em>9</em>.</p>
 
-<p>Additional resources:</p>
+<h2 id="additional-resources">Additional resources:</h2>
 
-<p><a href="http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html">What Ruby’s Double Pipe / Or Equals Really Does</a></p>
-
-<p><a href="https://www.ruby-forum.com/topic/151660/">The definitive list of OR Equal threads and pages</a></p>
+<ol>
+  <li>
+    <p><a href="http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html">What Ruby’s Double Pipe / Or Equals Really Does</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.ruby-forum.com/topic/151660/">The definitive list of OR Equal threads and pages</a></p>
+  </li>
+</ol>
 
 
       </section>
