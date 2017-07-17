@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-16T18:05:04-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-16T20:59:59-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
 </subtitle><entry><title type="html">Quit being difficult and just tell me what the hell a closure is</title><link href="http://localhost:4000/2017/07/02/quit-being-difficult.html" rel="alternate" type="text/html" title="Quit being difficult and just tell me what the hell a closure is" /><published>2017-07-02T00:00:00-04:00</published><updated>2017-07-02T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/02/quit-being-difficult</id><content type="html" xml:base="http://localhost:4000/2017/07/02/quit-being-difficult.html">&lt;blockquote&gt;
   &lt;p&gt;functions in JavaScript form closures. A closure is the combination of a function and the lexical
 environment within which that function was declared. (Mozilla Developer Network)&lt;/p&gt;
@@ -14,7 +14,7 @@ environment within which that function was declared. (Mozilla Developer Network)
 
 &lt;p&gt;In my first example, I am declaring a variable, &lt;em&gt;name&lt;/em&gt;, with the value of my name. Then, I am writing a function, &lt;em&gt;printName&lt;/em&gt;, that console logs the name variable that I declared above it. If you test this out yourself, you will see that it works.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd1.png&quot; alt=&quot;img1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/qbd1.png&quot; alt=&quot;img1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It may seem obvious that this works but — look closely — we never called our &lt;em&gt;printName&lt;/em&gt; function with an argument. What’s remarkable about what this function is doing is the very thing that makes it a closure. Our function was able to grab the name variable declared outside of itself, and within the global environment, to complete our operation.&lt;/p&gt;
 
@@ -23,12 +23,12 @@ environment within which that function was declared. (Mozilla Developer Network)
 
 &lt;p&gt;I’m going to cover two examples where your newfound understanding of closures can help. The first is private methods. A private method in JavaScript is a function that can only be accessed through another function. A quick example is below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd2.png&quot; alt=&quot;img2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/qbd2.png&quot; alt=&quot;img2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here, I have defined a function, &lt;em&gt;publicFunction&lt;/em&gt;, that returns another function, secretFunction. Both of these functions are closures, by definition, but only &lt;em&gt;publicFunction&lt;/em&gt; can be readily called by itself. When we try to console log our &lt;em&gt;secretFunction&lt;/em&gt;, we are told that it is not defined.
 In &lt;em&gt;publicFunction&lt;/em&gt;, I have employed a syntax that will be familiar if you have dealt with objects in JavaScript. By writing the return for &lt;em&gt;publicFunction&lt;/em&gt; as &lt;em&gt;“function name: function,”&lt;/em&gt; or in module pattern, we are able to call the inner function by chaining our call, similar to how we would retrieve attributes from an object. Let’s see that in action.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd3.png&quot; alt=&quot;img3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/qbd3.png&quot; alt=&quot;img3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;JavaScript’s use of closures allows us to hide our secretFunction from the rest of our global scope and even reuse the name in other functions.&lt;/p&gt;
 
@@ -38,13 +38,13 @@ In &lt;em&gt;publicFunction&lt;/em&gt;, I have employed a syntax that will be fa
 
 &lt;p&gt;Let’s examine the code below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd4.png&quot; alt=&quot;img4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/qbd4.png&quot; alt=&quot;img4&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here, I am defining a function, &lt;em&gt;multiplyNumbers&lt;/em&gt;, that accepts two numbers and returns their product. I have written this function to return another function in the case that it only receives one argument. This return function, or closure, can access the first variable that we gave our outer function, &lt;em&gt;multiplyNumbers&lt;/em&gt;, and complete our operation. At the bottom of the screenshot, you can see that both ways (passing both arguments into the outer function AND passing the first argument to the outer function and the second to the inner function) return the same result.&lt;/p&gt;
 
 &lt;p&gt;We can supply our outer function only one argument and name the resulting function (see below).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/qbd5.png&quot; alt=&quot;img5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/qbd5.png&quot; alt=&quot;img5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I believe that the power of closures truly shines here. Our named methods, &lt;em&gt;multiplyByFive&lt;/em&gt; and &lt;em&gt;multiplyByFour&lt;/em&gt;, were birthed by the same function, &lt;em&gt;multiplyNumbers&lt;/em&gt;. They only differ in the environment scope that they refer to. The first argument for &lt;em&gt;multiplyByFive&lt;/em&gt; is still 5, even after the creation of an additional function, &lt;em&gt;multiplyByFour&lt;/em&gt;, that takes in a different first argument. Pretty cool, right?&lt;/p&gt;
 
@@ -62,7 +62,76 @@ In &lt;em&gt;publicFunction&lt;/em&gt;, I have employed a syntax that will be fa
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc&quot;&gt;JavaScript Modules: A Beginner’s Guide&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">functions in JavaScript form closures. A closure is the combination of a function and the lexical environment within which that function was declared. (Mozilla Developer Network)</summary></entry><entry><title type="html">Ruby Operators: Double Pipe Equals</title><link href="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html" rel="alternate" type="text/html" title="Ruby Operators: Double Pipe Equals" /><published>2017-05-24T00:00:00-04:00</published><updated>2017-05-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals</id><content type="html" xml:base="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html">&lt;h2 id=&quot;hey-what-does-that--mean-in-your-ruby-code&quot;&gt;&lt;em&gt;“Hey, what does that ||= mean in your ruby code?”&lt;/em&gt;&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">functions in JavaScript form closures. A closure is the combination of a function and the lexical environment within which that function was declared. (Mozilla Developer Network)</summary></entry><entry><title type="html">4 things i learned toying around with nested resources in Rails</title><link href="http://localhost:4000/2017/06/13/4-things-i-learned-toying-around-with-nested-resources-in-rails.html" rel="alternate" type="text/html" title="4 things i learned toying around with nested resources in Rails" /><published>2017-06-13T20:19:00-04:00</published><updated>2017-06-13T20:19:00-04:00</updated><id>http://localhost:4000/2017/06/13/4-things-i-learned-toying-around-with-nested-resources-in-rails</id><content type="html" xml:base="http://localhost:4000/2017/06/13/4-things-i-learned-toying-around-with-nested-resources-in-rails.html">&lt;p&gt;Let’s table set — what is a nested resource?&lt;/p&gt;
+
+&lt;p&gt;I’m referring to a type of routing mechanism available to use in Ruby on Rails. The &lt;em&gt;‘resources’&lt;/em&gt; syntax is a useful way to have Rails generate each of the CRUD routes for you. Take a look below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested1.png&quot; alt=&quot;config/routes.rb in my rails application&quot; /&gt;
+&lt;em&gt;config/routes.rb in my rails application&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, in my &lt;em&gt;config/routes.rb&lt;/em&gt; file, I am using the &lt;em&gt;‘resources’&lt;/em&gt; keyword to draw routes for my &lt;em&gt;‘Artist’&lt;/em&gt; model. Now, when I run &lt;em&gt;‘rake routes,’&lt;/em&gt; I can see that the following routes have been generated for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested2.png&quot; alt=&quot;‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call&quot; /&gt;
+&lt;em&gt;‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If i want to expand my model to include songs, I have some choices to make. I could have Rails generate a suite of routes beginning with &lt;em&gt;‘/songs’&lt;/em&gt; for me, just as I have done with artists OR I could choose to nest these routes underneath those that I have already drawn for artists. The latter would look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested3.png&quot; alt=&quot;Here, I am passing my songs resources in as a block underneath ‘artists’&quot; /&gt;
+&lt;em&gt;Here, I am passing my songs resources in as a block underneath ‘artists’&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The nested approach provides me with the following list of routes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested4.png&quot; alt=&quot;routes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And here lies the first thing that I learned about nested routes.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-the-id-is-appended-with-the-name-of-previous-model-at-each-level-of-nesting&quot;&gt;#1 The :id is appended with the name of previous model at each level of nesting.&lt;/h2&gt;
+
+&lt;p&gt;My &lt;em&gt;‘/artists/:id’&lt;/em&gt; convention becomes &lt;em&gt;‘/artists/:artist_id/songs/:id’&lt;/em&gt; once I navigate into my song routes. Why is this syntax change important? Now when my application receives a request to any of the actions defined in my SongsController, an artist ID is passed to me in the format of &lt;em&gt;‘params[:artist_id].’&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If I want my &lt;em&gt;songs#index&lt;/em&gt; action to display a collection of songs that belong to the artist that I am navigating under, I will need to pass &lt;em&gt;‘params[:artist_id]’&lt;/em&gt; in as an argument to stipulate that I only want songs from the artist who’s ID matches (see below).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested5.png&quot; alt=&quot;app/controllers/songs_controller.rb&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-the-form_for-rails-helper-method-requires-you-to-pass-in-an-object-for-each-level-of-nesting&quot;&gt;#2 The ‘form_for’ Rails helper method requires you to pass in an object for each level of nesting.&lt;/h2&gt;
+
+&lt;p&gt;Rails comes pre-loaded with a bunch of different useful helper methods, one of which is &lt;em&gt;‘form_for,’&lt;/em&gt; which assists with the routing for model-based form input.&lt;/p&gt;
+
+&lt;p&gt;Typically, I would use an instance of a model as the sole argument in a form. When we create a new song, with the models outlined earlier, what we are really doing is creating a new song object that belongs to an artist object. Therefore, without letting our &lt;em&gt;‘form_for’&lt;/em&gt; element which artist we want to relate the form input to as well as which song, our ‘form_for’ model will not work. An example of my form for creating a new song is below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested6.png&quot; alt=&quot;form_For&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-nesting-can-get-out-of-hand-very-quickly&quot;&gt;#3 Nesting can get out of hand very quickly&lt;/h2&gt;
+
+&lt;p&gt;Simple demonstration: I’m going to add resources for &lt;em&gt;‘lyrics’&lt;/em&gt; underneath my nested &lt;em&gt;‘songs’&lt;/em&gt; resources.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/nested7.png&quot; alt=&quot;yeah, there’s gotta be a better way&quot; /&gt;
+&lt;em&gt;yeah, there’s gotta be a better way&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-nesting-best-practices&quot;&gt;#4 Nesting best practices&lt;/h2&gt;
+
+&lt;p&gt;From &lt;a href=&quot;http://weblog.jamisbuck.org/2007/2/5/nesting-resources&quot; title=&quot;Nesting resources&quot;&gt;Jamis Buck’s blog post&lt;/a&gt; (also referenced in the Rails guide):&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Resources should never be nested more than 1 level deep.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Buck’s blog post suggests an advanced method for keeping your routes and URLs from getting out of control but I wanted to highlight two quick ways that you can refactor your code.&lt;/p&gt;
+
+&lt;h3 id=&quot;shallow-nesting&quot;&gt;Shallow nesting&lt;/h3&gt;
+&lt;p&gt;Adding the &lt;em&gt;‘shallow: true’&lt;/em&gt; parameter to your nested resource will define routes at the base level, &lt;em&gt;‘/songs/’&lt;/em&gt;, for four of our RESTful routes — &lt;em&gt;show&lt;/em&gt;, &lt;em&gt;edit&lt;/em&gt;, &lt;em&gt;update&lt;/em&gt; and &lt;em&gt;destroy&lt;/em&gt;, while leaving the remaining routes — &lt;em&gt;index, new, create&lt;/em&gt;— at the nested level. So how is this useful to us?&lt;/p&gt;
+
+&lt;p&gt;In my model, with artists and songs, we are now able to use the routes starting with &lt;em&gt;‘/songs/:id’&lt;/em&gt; to view or modify existing songs on an individual basis. Recall that songs belong to artists, so upon creation, we still need to initialize a song with an artist relationship. However, once a song is created, it doesn’t matter to artist relationship if we would like to edit or delete it. And so, we don’t need to follow a lengthy route, such as &lt;em&gt;‘/artists/:artist_id/songs/:id/edit’&lt;/em&gt; to make our changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;collectionmember-blocks&quot;&gt;Collection/Member blocks&lt;/h3&gt;
+
+&lt;p&gt;While it would not help to simplify my model, collection and member blocks can be used to create routes with specific dependencies.&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading and be sure to check out the additional resources linked below.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://weblog.jamisbuck.org/2007/2/5/nesting-resources&quot; title=&quot;Nesting resources&quot;&gt;Nesting resources, http://weblog.jamisbuck.org/2007/2/5/nesting-resources&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2034700/form-for-with-nested-resources&quot;&gt;Form for with nested resources, https://stackoverflow.com/questions/2034700/form-for-with-nested-resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Let’s table set — what is a nested resource?</summary></entry><entry><title type="html">Ruby Operators: Double Pipe Equals</title><link href="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html" rel="alternate" type="text/html" title="Ruby Operators: Double Pipe Equals" /><published>2017-05-24T00:00:00-04:00</published><updated>2017-05-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals</id><content type="html" xml:base="http://localhost:4000/2017/05/24/ruby-operators-double-pipe-equals.html">&lt;h2 id=&quot;hey-what-does-that--mean-in-your-ruby-code&quot;&gt;&lt;em&gt;“Hey, what does that ||= mean in your ruby code?”&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;In my first blog post as a programmer, I thought it would be appropriate to explain one of the questions that I was asked during my first day at &lt;a href=&quot;https://flatironschool.com/&quot;&gt;Flatiron School&lt;/a&gt;. This is a question that I had come up about a month ago and one that led me down a rabbit hole of ruby forums and reddit posts (I’ll save you the trouble and link a few of the better sources at the bottom of this post).&lt;/p&gt;
 
