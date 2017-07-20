@@ -10,22 +10,22 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="./android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="_site/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="_site/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="_site/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="_site/favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="_site/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="_site/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="_site/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="_site/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="_site/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="_site/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="_site/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="_site/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="_site/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="_site/favicon.ico/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="_site/favicon.ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   </head>
 
@@ -34,7 +34,7 @@
       <header>
         <a href="/"><h1>Jared Johnson</h1></a>
         <p>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
-</p>
+        </p>
 
         <p class="view">I tweet often so feel free to follow <a href="https://twitter.com/yungpanko" target="_blank">@yungpanko</a>.</p>
         <p class="view">See my projects on <a href="https://github.com/yungpanko" target="_blank">GitHub</a>.</p>
@@ -49,74 +49,80 @@
 
         <p>Let’s table set — what is a nested resource?</p>
 
-<p>I’m referring to a type of routing mechanism available to use in Ruby on Rails. The <em>‘resources’</em> syntax is a useful way to have Rails generate each of the CRUD routes for you. Take a look below.</p>
+        <p>I’m referring to a type of routing mechanism available to use in Ruby on Rails. The <em>‘resources’</em> syntax is a useful way to have Rails generate each of the CRUD routes for you. Take a look below.</p>
 
-<p><img src="/assets/images/nested1.png" alt="config/routes.rb in my rails application" />
-<em>config/routes.rb in my rails application</em></p>
+        <p><img src="/assets/images/nested1.png" alt="config/routes.rb in my rails application" />
+          <em>config/routes.rb in my rails application</em></p>
 
-<p>Here, in my <em>config/routes.rb</em> file, I am using the <em>‘resources’</em> keyword to draw routes for my <em>‘Artist’</em> model. Now, when I run <em>‘rake routes,’</em> I can see that the following routes have been generated for me.</p>
+        <p>Here, in my <em>config/routes.rb</em> file, I am using the <em>‘resources’</em> keyword to draw routes for my <em>‘Artist’</em> model. Now, when I run <em>‘rake routes,’</em> I can see that the following routes have been generated for me.</p>
 
-<p><img src="/assets/images/nested2.png" alt="‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call" />
-<em>‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call</em></p>
+        <p><img src="/assets/images/nested2.png" alt="‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call" />
+          <em>‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call</em></p>
 
-<p>If i want to expand my model to include songs, I have some choices to make. I could have Rails generate a suite of routes beginning with <em>‘/songs’</em> for me, just as I have done with artists OR I could choose to nest these routes underneath those that I have already drawn for artists. The latter would look like this.</p>
+        <p>If i want to expand my model to include songs, I have some choices to make. I could have Rails generate a suite of routes beginning with <em>‘/songs’</em> for me, just as I have done with artists OR I could choose to nest these routes underneath
+          those that I have already drawn for artists. The latter would look like this.</p>
 
-<p><img src="/assets/images/nested3.png" alt="Here, I am passing my songs resources in as a block underneath ‘artists’" />
-<em>Here, I am passing my songs resources in as a block underneath ‘artists’</em></p>
+        <p><img src="/assets/images/nested3.png" alt="Here, I am passing my songs resources in as a block underneath ‘artists’" />
+          <em>Here, I am passing my songs resources in as a block underneath ‘artists’</em></p>
 
-<p>The nested approach provides me with the following list of routes.</p>
+        <p>The nested approach provides me with the following list of routes.</p>
 
-<p><img src="/assets/images/nested4.png" alt="routes" /></p>
+        <p><img src="/assets/images/nested4.png" alt="routes" /></p>
 
-<p>And here lies the first thing that I learned about nested routes.</p>
+        <p>And here lies the first thing that I learned about nested routes.</p>
 
-<h2 id="1-the-id-is-appended-with-the-name-of-previous-model-at-each-level-of-nesting">#1 The :id is appended with the name of previous model at each level of nesting.</h2>
+        <h2 id="1-the-id-is-appended-with-the-name-of-previous-model-at-each-level-of-nesting">#1 The :id is appended with the name of previous model at each level of nesting.</h2>
 
-<p>My <em>‘/artists/:id’</em> convention becomes <em>‘/artists/:artist_id/songs/:id’</em> once I navigate into my song routes. Why is this syntax change important? Now when my application receives a request to any of the actions defined in my SongsController, an artist ID is passed to me in the format of <em>‘params[:artist_id].’</em></p>
+        <p>My <em>‘/artists/:id’</em> convention becomes <em>‘/artists/:artist_id/songs/:id’</em> once I navigate into my song routes. Why is this syntax change important? Now when my application receives a request to any of the actions defined in my SongsController,
+          an artist ID is passed to me in the format of <em>‘params[:artist_id].’</em></p>
 
-<p>If I want my <em>songs#index</em> action to display a collection of songs that belong to the artist that I am navigating under, I will need to pass <em>‘params[:artist_id]’</em> in as an argument to stipulate that I only want songs from the artist who’s ID matches (see below).</p>
+        <p>If I want my <em>songs#index</em> action to display a collection of songs that belong to the artist that I am navigating under, I will need to pass <em>‘params[:artist_id]’</em> in as an argument to stipulate that I only want songs from the artist
+          who’s ID matches (see below).</p>
 
-<p><img src="/assets/images/nested5.png" alt="app/controllers/songs_controller.rb" /></p>
+        <p><img src="/assets/images/nested5.png" alt="app/controllers/songs_controller.rb" /></p>
 
-<h2 id="2-the-form_for-rails-helper-method-requires-you-to-pass-in-an-object-for-each-level-of-nesting">#2 The ‘form_for’ Rails helper method requires you to pass in an object for each level of nesting.</h2>
+        <h2 id="2-the-form_for-rails-helper-method-requires-you-to-pass-in-an-object-for-each-level-of-nesting">#2 The ‘form_for’ Rails helper method requires you to pass in an object for each level of nesting.</h2>
 
-<p>Rails comes pre-loaded with a bunch of different useful helper methods, one of which is <em>‘form_for,’</em> which assists with the routing for model-based form input.</p>
+        <p>Rails comes pre-loaded with a bunch of different useful helper methods, one of which is <em>‘form_for,’</em> which assists with the routing for model-based form input.</p>
 
-<p>Typically, I would use an instance of a model as the sole argument in a form. When we create a new song, with the models outlined earlier, what we are really doing is creating a new song object that belongs to an artist object. Therefore, without letting our <em>‘form_for’</em> element which artist we want to relate the form input to as well as which song, our ‘form_for’ model will not work. An example of my form for creating a new song is below.</p>
+        <p>Typically, I would use an instance of a model as the sole argument in a form. When we create a new song, with the models outlined earlier, what we are really doing is creating a new song object that belongs to an artist object. Therefore, without
+          letting our <em>‘form_for’</em> element which artist we want to relate the form input to as well as which song, our ‘form_for’ model will not work. An example of my form for creating a new song is below.</p>
 
-<p><img src="/assets/images/nested6.png" alt="form_For" /></p>
+        <p><img src="/assets/images/nested6.png" alt="form_For" /></p>
 
-<h2 id="3-nesting-can-get-out-of-hand-very-quickly">#3 Nesting can get out of hand very quickly</h2>
+        <h2 id="3-nesting-can-get-out-of-hand-very-quickly">#3 Nesting can get out of hand very quickly</h2>
 
-<p>Simple demonstration: I’m going to add resources for <em>‘lyrics’</em> underneath my nested <em>‘songs’</em> resources.</p>
+        <p>Simple demonstration: I’m going to add resources for <em>‘lyrics’</em> underneath my nested <em>‘songs’</em> resources.</p>
 
-<p><img src="/assets/images/nested7.png" alt="yeah, there’s gotta be a better way" />
-<em>yeah, there’s gotta be a better way</em></p>
+        <p><img src="/assets/images/nested7.png" alt="yeah, there’s gotta be a better way" />
+          <em>yeah, there’s gotta be a better way</em></p>
 
-<h2 id="4-nesting-best-practices">#4 Nesting best practices</h2>
+        <h2 id="4-nesting-best-practices">#4 Nesting best practices</h2>
 
-<p>From <a href="http://weblog.jamisbuck.org/2007/2/5/nesting-resources" title="Nesting resources">Jamis Buck’s blog post</a> (also referenced in the Rails guide):</p>
-<blockquote>
-  <p>Resources should never be nested more than 1 level deep.</p>
-</blockquote>
+        <p>From <a href="http://weblog.jamisbuck.org/2007/2/5/nesting-resources" title="Nesting resources">Jamis Buck’s blog post</a> (also referenced in the Rails guide):</p>
+        <blockquote>
+          <p>Resources should never be nested more than 1 level deep.</p>
+        </blockquote>
 
-<p>Buck’s blog post suggests an advanced method for keeping your routes and URLs from getting out of control but I wanted to highlight two quick ways that you can refactor your code.</p>
+        <p>Buck’s blog post suggests an advanced method for keeping your routes and URLs from getting out of control but I wanted to highlight two quick ways that you can refactor your code.</p>
 
-<h3 id="shallow-nesting">Shallow nesting</h3>
-<p>Adding the <em>‘shallow: true’</em> parameter to your nested resource will define routes at the base level, <em>‘/songs/’</em>, for four of our RESTful routes — <em>show</em>, <em>edit</em>, <em>update</em> and <em>destroy</em>, while leaving the remaining routes — <em>index, new, create</em>— at the nested level. So how is this useful to us?</p>
+        <h3 id="shallow-nesting">Shallow nesting</h3>
+        <p>Adding the <em>‘shallow: true’</em> parameter to your nested resource will define routes at the base level, <em>‘/songs/’</em>, for four of our RESTful routes — <em>show</em>, <em>edit</em>, <em>update</em> and <em>destroy</em>, while leaving
+          the remaining routes — <em>index, new, create</em>— at the nested level. So how is this useful to us?</p>
 
-<p>In my model, with artists and songs, we are now able to use the routes starting with <em>‘/songs/:id’</em> to view or modify existing songs on an individual basis. Recall that songs belong to artists, so upon creation, we still need to initialize a song with an artist relationship. However, once a song is created, it doesn’t matter to artist relationship if we would like to edit or delete it. And so, we don’t need to follow a lengthy route, such as <em>‘/artists/:artist_id/songs/:id/edit’</em> to make our changes.</p>
+        <p>In my model, with artists and songs, we are now able to use the routes starting with <em>‘/songs/:id’</em> to view or modify existing songs on an individual basis. Recall that songs belong to artists, so upon creation, we still need to initialize
+          a song with an artist relationship. However, once a song is created, it doesn’t matter to artist relationship if we would like to edit or delete it. And so, we don’t need to follow a lengthy route, such as <em>‘/artists/:artist_id/songs/:id/edit’</em>          to make our changes.</p>
 
-<h3 id="collectionmember-blocks">Collection/Member blocks</h3>
+        <h3 id="collectionmember-blocks">Collection/Member blocks</h3>
 
-<p>While it would not help to simplify my model, collection and member blocks can be used to create routes with specific dependencies.</p>
+        <p>While it would not help to simplify my model, collection and member blocks can be used to create routes with specific dependencies.</p>
 
-<p>Thank you for reading and be sure to check out the additional resources linked below.</p>
+        <p>Thank you for reading and be sure to check out the additional resources linked below.</p>
 
-<ol>
-  <li><a href="http://weblog.jamisbuck.org/2007/2/5/nesting-resources" title="Nesting resources">Nesting resources, http://weblog.jamisbuck.org/2007/2/5/nesting-resources</a></li>
-  <li><a href="https://stackoverflow.com/questions/2034700/form-for-with-nested-resources">Form for with nested resources, https://stackoverflow.com/questions/2034700/form-for-with-nested-resources</a></li>
-</ol>
+        <ol>
+          <li><a href="http://weblog.jamisbuck.org/2007/2/5/nesting-resources" title="Nesting resources">Nesting resources, http://weblog.jamisbuck.org/2007/2/5/nesting-resources</a></li>
+          <li><a href="https://stackoverflow.com/questions/2034700/form-for-with-nested-resources">Form for with nested resources, https://stackoverflow.com/questions/2034700/form-for-with-nested-resources</a></li>
+        </ol>
 
 
       </section>
@@ -127,7 +133,7 @@
     <script src="/assets/js/scale.fix.js"></script>
 
 
-    
+
   </body>
 
 </html>
