@@ -2,6 +2,7 @@
 layout: post
 title:  "Quit being difficult and just tell me what the hell a closure is"
 date:   2017-07-02
+author: Jared Johnson
 ---
 
 > functions in JavaScript form closures. A closure is the combination of a function and the lexical

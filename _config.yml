@@ -15,6 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Jared Johnson
 email: jrjohns@mit.edu
+author: Jared Johnson
+url: http://jared-johnson.com
 description: > # this means to ignore newlines until "baseurl:"
   Tech and Public Policy are on a collision course.
   I'm working to mitigate the damage.

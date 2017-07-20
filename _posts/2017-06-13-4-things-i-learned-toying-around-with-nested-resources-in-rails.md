@@ -2,6 +2,7 @@
 layout: "post"
 title: "4 things i learned toying around with nested resources in Rails"
 date: "2017-06-13 20:19"
+author: Jared Johnson
 ---
 
 Let’s table set — what is a nested resource?

@@ -2,6 +2,7 @@
 layout: post
 title:  "Ruby Operators: Double Pipe Equals"
 date:   2017-05-24
+author: Jared Johnson
 ---
 
 ## *“Hey, what does that \|\|= mean in your ruby code?”*
