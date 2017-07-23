@@ -1,5 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-19T23:17:51-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
-</subtitle><author><name>Jared Johnson</name></author><entry><title type="html">Quit being difficult and just tell me what the hell a closure is</title><link href="http://localhost:4000/2017/07/02/quit-being-difficult.html" rel="alternate" type="text/html" title="Quit being difficult and just tell me what the hell a closure is" /><published>2017-07-02T00:00:00-04:00</published><updated>2017-07-02T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/02/quit-being-difficult</id><content type="html" xml:base="http://localhost:4000/2017/07/02/quit-being-difficult.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-23T17:03:31-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
+</subtitle><author><name>Jared Johnson</name></author><entry><title type="html">How I built my personal website</title><link href="http://localhost:4000/2017/07/22/how-i-built-my-website.html" rel="alternate" type="text/html" title="How I built my personal website" /><published>2017-07-22T00:00:00-04:00</published><updated>2017-07-22T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/22/how-i-built-my-website</id><content type="html" xml:base="http://localhost:4000/2017/07/22/how-i-built-my-website.html">&lt;p&gt;Last weekend, I decided to build my own personal website and I thought it would be a helpful resource to document the steps that I took to get &lt;a href=&quot;http://jared-johnson.com/&quot;&gt;jared-johnson.com&lt;/a&gt; up and running.&lt;/p&gt;
+
+&lt;h3 id=&quot;hosting-on-github-pages&quot;&gt;Hosting on Github Pages&lt;/h3&gt;
+
+&lt;p&gt;I decided to set my website up using &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;. For those who aren’t familiar with GitHub, it’s a &lt;a href=&quot;https://en.wikipedia.org/wiki/GitHub&quot;&gt;version control repository&lt;/a&gt; for code. What this means is that developers use it to preserve iterations of their projects and applications. It’s a great tool and for those new to programming, I highly recommend checking it out.&lt;/p&gt;
+
+&lt;p&gt;Ok so what is GitHub Pages? GitHub offers a relatively easy way for users to host projects and personal websites to the web for free. And you’re able to manage your website using the same workflow that you’ll be familiar with from working with code projects on GitHub.&lt;/p&gt;
+
+&lt;p&gt;To start using GitHub Pages for your website, the first think you will need to do is &lt;a href=&quot;https://github.com/new&quot;&gt;create a repository&lt;/a&gt; with your GitHub username and the extension &lt;em&gt;‘.github.io’&lt;/em&gt; – it should look something like this:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;your-username.github.io&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once you have this repository set up, the only file you need to create your website something called &lt;em&gt;index.html&lt;/em&gt;. I cloned my repository down locally and set my website up with it’s own directory but if these words mean nothing to you, I would recommend downloading the &lt;a href=&quot;https://central.github.com/mac/latest&quot;&gt;GitHub app&lt;/a&gt; to interface with your website repo.&lt;/p&gt;
+
+&lt;p&gt;Using a text editor like &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;, try typing &lt;em&gt;‘it’s my website’&lt;/em&gt; in your &lt;em&gt;index.html&lt;/em&gt; file and sending those changes up to GitHub using the code below if you’re using the terminal, or by syncing your changes if you are using the GitHub app.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add .
+git commit -m &quot;my first commit&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now go to your-username.github.io in your browser and you should see something like this!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/website1.png&quot; alt=&quot;your very own website!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Your website is now live and you have the freedom to make it anything you want. Once I got to this point, I only partly felt satisfied. I have a functioning website but I have to type in the full &lt;em&gt;.github.io&lt;/em&gt; URL to access my site. Wouldn’t it be cooler if I could pull my website up with a snappy &lt;em&gt;‘.com’&lt;/em&gt; address? Well, you can be the judge of that but I knew my next step was to buy a domain.&lt;/p&gt;
+
+&lt;h3 id=&quot;buying-and-setting-up-my-domain&quot;&gt;Buying and setting up my domain&lt;/h3&gt;
+
+&lt;p&gt;First thing I did? High-tailed it to &lt;a href=&quot;https://www.godaddy.com/&quot;&gt;GoDaddy.com&lt;/a&gt;. Dot com domain names can get pricey and I was lucky to find &lt;a href=&quot;/&quot;&gt;jared-johnson.com&lt;/a&gt; at an affordable price (Although I did opt to pay a premium to insert a dash between my name rather than purchasing &lt;a href=&quot;http://www.jaredjohnson.net&quot;&gt;jaredjohnson.net&lt;/a&gt; or &lt;a href=&quot;http://www.jaredjohnson.us&quot;&gt;jaredjohnson.us&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;To get my GitHub site to be served to my fancy new domain name, I had to complete a few more steps. First, I had to let GitHub know that I was using a custom domain. In the ‘settings’ tab of your repository, you should find a box to enter a different URL (see below).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/website2.png&quot; alt=&quot; custom domain box&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After letting GitHub know to serve your custom domain, you will need to let your DNS provider (GoDaddy in my case) know where to route your URL. I found a really helpful &lt;a href=&quot;https://medium.com/@kswanie21/how-to-set-up-godaddy-domain-with-github-pages-a9300366c7b&quot;&gt;blog post&lt;/a&gt; by Kristen Swanson that details the steps needed to set this up if you are also using GoDaddy.&lt;/p&gt;
+
+&lt;h3 id=&quot;building-the-site&quot;&gt;Building the site&lt;/h3&gt;
+
+&lt;p&gt;As awesome as it is to own a URL on the internet that just says “it’s my website,” I knew that I wanted to use my site for blogging. By now, I know enough programming to build something from scratch that looks good but my experience has also taught me just how much work can go into maintaining something as simple as a blog. Drawing routes for all my posts, formatting my plain text and designing my site in plain HTML/CSS was starting to look like a part-time job. That was until I discovered &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jekyll is a static-site generator built by one of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tom_Preston-Werner&quot;&gt;co-founders&lt;/a&gt; of GitHub. Ok but what is a static-site generator? This just means that Jekyll is an application that can render all of the pages of your website from plain text and a template. Jekyll uses &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown Syntax&lt;/a&gt;, which is mostly plain text that renders to HTML, to tell your site what the contents of each page or post should be. It makes managing your site so much easier. With all of this said, understanding a little bit of HTML and CSS is extremely useful when using Jekyll, which I will demonstrate later.&lt;/p&gt;
+
+&lt;p&gt;Allow me to show you an example to better hammer home why this is so useful and then I’ll discuss setting up Jekyll.&lt;/p&gt;
+
+&lt;p&gt;This is what the Markdown syntax looks like for my last blog post.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/website3.png&quot; alt=&quot;markdown syntax for my post&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And this where my blog post content is pulled into my HMTL file.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/website4.png&quot; alt=&quot;html template&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All of this is rendered to my site to display like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/website5.png&quot; alt=&quot;blog post output&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I didn’t have to set up a database or write logic that tells my site how to deal with each individual post. Following the convention of Jekyll projects, I was able to get my post content rendered to my site in minutes. Pretty cool, right? Now let’s discuss setting up Jekyll.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Setup/Configuration&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll is a RubyGem. This means that, assuming you have a version of the &lt;a href=&quot;http://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; programming language installed on your machine, Jekyll can be installed using the following commands.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll
+jekyll new my-website
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;You should now have a new Jekyll project at ‘my-website’ on your computer. Since I already have a working site via my GitHub pages repository, I moved all of the files that Jekyll gave me into the same folder. Now is a good time to discuss what these files are.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;File Structure&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# from the Jekyll official documentation
+.
+├── _config.yml
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2017-07-02-quit-being-difficult.md
+|   └── 2017-06-13-4-things-i-learned-toying-around-with-nested-resources-in-rails.md
+├── _sass
+|   └── _layout.scss
+├── _site
+└── index.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;For simplicity, I’ve pared down the file tree example from the official Jekyll documentation. The first file that you should edit is &lt;em&gt;_config.yml&lt;/em&gt;, which is the configuration file that contains settings and variables that become available for use throughout your site.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;em&gt;_layouts&lt;/em&gt; folder is where your page templates are stored. I am currently only using two different templates for my site, one for blog posts – &lt;em&gt;post.html&lt;/em&gt; – and another for my home page called &lt;em&gt;default.html&lt;/em&gt;. As I mentioned earlier, these templates are just HTML files that are populated with content from associated Markdown files (where you write your plain text). Content from your posts and variables defined in your &lt;em&gt;_config.yml&lt;/em&gt; file will be available to these templates using double brackets.&lt;/p&gt;
+
+&lt;p&gt;New posts must follow a certain naming convention (see below) to be recognized by the Jekyll logic.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# post example in _posts folder
+YYYY-MM-DD-title.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;em&gt;‘.md’&lt;/em&gt; here denotes Markdown syntax. Anything I write in these files is sent through my &lt;em&gt;post.html&lt;/em&gt; template and a ready-to-serve HTML file is generated in my &lt;em&gt;_site&lt;/em&gt; folder. In the &lt;em&gt;_site&lt;/em&gt; folder lies the magic of Jekyll. All of the HTML files, images and CSS/styling elements used in my website are copied over or generated in this folder. As you make changes to your ‘.md’ files in your &lt;em&gt;_posts&lt;/em&gt; folder, the accompanying HMTL file in the &lt;em&gt;_site&lt;/em&gt; folder gets re-generated. With GitHub pages, the only thing I need to do after creating or editing a post is pushing my commits up to my repository. It’s that easy – No part-time job necessary.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Design/Layouts&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The last that I want to touch on is using themes in Jekyll. Pre-made themes make it really easy to spin up a site that looks great in minutes. If you initialize your Jekyll project using the ‘jekyll new’ command, your site will come with a default theme named &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;. While this theme looks great, I wanted something even more pared down and swapped the theme for one called &lt;a href=&quot;https://github.com/pages-themes/minimal&quot;&gt;minimal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jekyll makes changing your theme extremely easy. In your &lt;em&gt;config.yml&lt;/em&gt; file, you can easy swap out your theme for a number of options available in the &lt;a href=&quot;https://rubygems.org/search?utf8=%E2%9C%93&amp;amp;query=jekyll-theme&quot;&gt;RubyGems library&lt;/a&gt;. I narrowed my search by reviewing the list of themes &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;supported by GitHub Pages&lt;/a&gt;. Each theme comes with it’s own default template for pages, so I would recommend copying this over from the GitHub repository for your chosen theme.&lt;/p&gt;
+
+&lt;p&gt;I genuinely hope that this post has been helpful and that I’ve inspired you to create your own website. Don’t hesitate to reach out to me &lt;a href=&quot;https://twitter.com/yungpanko&quot;&gt;@yungpanko&lt;/a&gt; if you have any questions about my experience.&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional resources:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@kswanie21/how-to-set-up-godaddy-domain-with-github-pages-a9300366c7b&quot;&gt;How to Set up GoDaddy Domain with GitHub Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/home/&quot;&gt;Jekyll Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yeswejekyll.com/&quot;&gt;YesWeJekyl Startup Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jared Johnson</name></author><summary type="html">Last weekend, I decided to build my own personal website and I thought it would be a helpful resource to document the steps that I took to get jared-johnson.com up and running.</summary></entry><entry><title type="html">Quit being difficult and just tell me what the hell a closure is</title><link href="http://localhost:4000/2017/07/02/quit-being-difficult.html" rel="alternate" type="text/html" title="Quit being difficult and just tell me what the hell a closure is" /><published>2017-07-02T00:00:00-04:00</published><updated>2017-07-02T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/02/quit-being-difficult</id><content type="html" xml:base="http://localhost:4000/2017/07/02/quit-being-difficult.html">&lt;blockquote&gt;
   &lt;p&gt;functions in JavaScript form closures. A closure is the combination of a function and the lexical
 environment within which that function was declared. (Mozilla Developer Network)&lt;/p&gt;
 &lt;/blockquote&gt;

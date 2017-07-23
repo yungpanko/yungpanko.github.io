@@ -25,6 +25,7 @@ url: "http://jared-johnson.com/" # the base hostname & protocol for your site, e
 twitter_username: yungpanko
 github_username:  yungpanko
 linkedin_username:  jaredrayjohnson
+google_analytics: UA-103067234-1
 
 # Build settings
 markdown: kramdown
