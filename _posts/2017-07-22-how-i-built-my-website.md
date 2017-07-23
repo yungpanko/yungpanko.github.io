@@ -104,7 +104,7 @@ The _'.md'_ here denotes Markdown syntax. Anything I write in these files is sen
 
 The last that I want to touch on is using themes in Jekyll. Pre-made themes make it really easy to spin up a site that looks great in minutes. If you initialize your Jekyll project using the 'jekyll new' command, your site will come with a default theme named [minima](https://github.com/jekyll/minima). While this theme looks great, I wanted something even more pared down and swapped the theme for one called [minimal](https://github.com/pages-themes/minimal).
 
-Jekyll makes changing your theme extremely easy. In your _config.yml_ file, you can easy swap out your theme for a number of options available in the [RubyGems library](https://rubygems.org/search?utf8=%E2%9C%93&query=jekyll-theme). I narrowed my search by reviewing the list of themes [supported by GitHub Pages](https://pages.github.com/themes/). Each theme comes with it's own default template for pages, so I would recommend copying this over from the GitHub repository for your chosen theme.
+Jekyll makes changing your theme extremely easy. In your _config.yml_ file, you can swap out your theme for a number of options available in the [RubyGems library](https://rubygems.org/search?utf8=%E2%9C%93&query=jekyll-theme). I narrowed my search by reviewing the list of themes [supported by GitHub Pages](https://pages.github.com/themes/). Each theme comes with it's own default template for pages, so I would recommend copying this over from the GitHub repository for your chosen theme.
 
 I genuinely hope that this post has been helpful and that I've inspired you to create your own website. Don't hesitate to reach out to me [@yungpanko](https://twitter.com/yungpanko) if you have any questions about my experience.
 
