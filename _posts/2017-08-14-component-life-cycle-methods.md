@@ -58,9 +58,11 @@ The code example above is taken from one of my projects. I wanted to update a co
 
 ## componentWillUpdate
 
-Our next function, `componentWillUpdate` is the last method called before a render takes place. This is our last opportunity to dispatch actions, so long as they do not attempt to push changes to our component state. 
+Our next function, `componentWillUpdate` is the last method called before a render takes place. This is our last opportunity to dispatch actions, so long as they do not attempt to push changes to our component state.
 
 ## componentDidUpdate
+
+The last render method, `componentDidUpdate` is called as soon as a re-render has completed. The primary use cases for this method are interacting with third-party libraries and resources.
 
 ## Additional resources:
 

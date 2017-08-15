@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-15T13:22:34-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-15T13:29:16-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
 </subtitle><author><name>Jared Johnson</name></author><entry><title type="html">Component Lifecycle Methods: Render Methods</title><link href="http://localhost:4000/2017/08/14/component-life-cycle-methods.html" rel="alternate" type="text/html" title="Component Lifecycle Methods: Render Methods" /><published>2017-08-14T00:00:00-04:00</published><updated>2017-08-14T00:00:00-04:00</updated><id>http://localhost:4000/2017/08/14/component-life-cycle-methods</id><content type="html" xml:base="http://localhost:4000/2017/08/14/component-life-cycle-methods.html">&lt;p&gt;I’ve been building &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; projects for the last few weeks and I keep finding myself returning to the chart below (pulled from a lesson in the &lt;a href=&quot;https://learn.co/&quot;&gt;Learn.co&lt;/a&gt; curriculum). It summarizes the inputs and use cases for the four Component Lifecycle Methods related to rendering.&lt;/p&gt;
 
 &lt;table&gt;
@@ -110,6 +110,8 @@
 &lt;p&gt;Our next function, &lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillUpdate&lt;/code&gt; is the last method called before a render takes place. This is our last opportunity to dispatch actions, so long as they do not attempt to push changes to our component state.&lt;/p&gt;
 
 &lt;h2 id=&quot;componentdidupdate&quot;&gt;componentDidUpdate&lt;/h2&gt;
+
+&lt;p&gt;The last render method, &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidUpdate&lt;/code&gt; is called as soon as a re-render has completed. The primary use cases for this method are interacting with third-party libraries and resources.&lt;/p&gt;
 
 &lt;h2 id=&quot;additional-resources&quot;&gt;Additional resources:&lt;/h2&gt;
 
