@@ -1,5 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-27T10:33:07-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
-</subtitle><author><name>Jared Johnson</name></author><entry><title type="html">How I built my personal website</title><link href="http://localhost:4000/2017/07/22/how-i-built-my-website.html" rel="alternate" type="text/html" title="How I built my personal website" /><published>2017-07-22T00:00:00-04:00</published><updated>2017-07-22T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/22/how-i-built-my-website</id><content type="html" xml:base="http://localhost:4000/2017/07/22/how-i-built-my-website.html">&lt;p&gt;Last weekend, I decided to build my own personal website and I thought it would be a helpful resource to document the steps that I took to get &lt;a href=&quot;http://jared-johnson.com/&quot;&gt;jared-johnson.com&lt;/a&gt; up and running.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-15T13:22:34-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
+</subtitle><author><name>Jared Johnson</name></author><entry><title type="html">Component Lifecycle Methods: Render Methods</title><link href="http://localhost:4000/2017/08/14/component-life-cycle-methods.html" rel="alternate" type="text/html" title="Component Lifecycle Methods: Render Methods" /><published>2017-08-14T00:00:00-04:00</published><updated>2017-08-14T00:00:00-04:00</updated><id>http://localhost:4000/2017/08/14/component-life-cycle-methods</id><content type="html" xml:base="http://localhost:4000/2017/08/14/component-life-cycle-methods.html">&lt;p&gt;I’ve been building &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; projects for the last few weeks and I keep finding myself returning to the chart below (pulled from a lesson in the &lt;a href=&quot;https://learn.co/&quot;&gt;Learn.co&lt;/a&gt; curriculum). It summarizes the inputs and use cases for the four Component Lifecycle Methods related to rendering.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Method&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;nextProps&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;nextState&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Can call &lt;code class=&quot;highlighter-rouge&quot;&gt;this.setState&lt;/code&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillReceiveProps&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shouldComponentUpdate&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillUpdate&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidUpdate&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes*&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes*&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Method&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Called when?&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Used for&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillReceiveProps&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;component is going to get new props&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;applying state changes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shouldComponentUpdate&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;when a re-render has been triggered&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;deciding whether to re-render&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillUpdate&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;new state and props are being received&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;dispatching actions based on state change&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidUpdate&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;just after re-render&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DOM updates following a render&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;* &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidUpdate&lt;/code&gt; will actually receive &lt;code class=&quot;highlighter-rouge&quot;&gt;prevProps&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;prevState&lt;/code&gt; as arguments, as the newly applied state and props can be accessed through &lt;code class=&quot;highlighter-rouge&quot;&gt;this.props&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;this.state&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And below is the order in which these methods are called, courtesy of &lt;a href=&quot;https://medium.com/react-ecosystem/react-components-lifecycle-ce09239010df&quot;&gt;Osmel Mora&lt;/a&gt;.
+&lt;img src=&quot;/assets/images/lifecycle1.png&quot; alt=&quot;render methods order&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This detail, alone, is worth a bookmark but in order to fully convince you, I shall elaborate. Let’s break down each of these methods. First up, we have &lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillReceiveProps&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;componentwillreceiveprops&quot;&gt;componentWillReceiveProps&lt;/h2&gt;
+
+&lt;p&gt;An important point to make here is that each of these methods is called &lt;strong&gt;after&lt;/strong&gt; a component has been mounted and thus &lt;strong&gt;after&lt;/strong&gt; the initial render. Our first render method is called before a component receives new props. This guy won’t save you if you forget to write a default state or send initial props to your component. &lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillReceiveProps&lt;/code&gt; is a method that React gives you to deal with new props without triggering a state change (leading to an infinite loop). One of my code instructors argues that &lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillReceiveProps&lt;/code&gt; is the single most underutilized lifecycle method and I would agree given my own history of underutilizing it.&lt;/p&gt;
+
+&lt;p&gt;code example:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;componentWillReceiveProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nextProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;itemToBeUpdated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newInfoToUse&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the code example above, I am using my new props to update the state of my component. This will take place before the re-render has completed and should any display elements be controlled by what has changed in state, theses changes will be displayed to the user.&lt;/p&gt;
+
+&lt;h2 id=&quot;shouldcomponentupdate&quot;&gt;shouldComponentUpdate&lt;/h2&gt;
+
+&lt;p&gt;Next up is the odd one of the bunch, &lt;code class=&quot;highlighter-rouge&quot;&gt;shouldComponentUpdate&lt;/code&gt;. This function is different from the others in the component lifecycle in that it expects to return a boolean (and defaults to true). &lt;code class=&quot;highlighter-rouge&quot;&gt;shouldComponentUpdate&lt;/code&gt; is used to tell React whether or not a re-render that has been triggered should be completed. This is useful when the developer is concerned with gating unnecessary rendering.&lt;/p&gt;
+
+&lt;p&gt;code example:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;shouldComponentUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nextProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The code example above is taken from one of my projects. I wanted to update a controlled searchable dropdown list ONLY if the text that I was storing my state changed. Any other actions that trigger a re-render in this component will be blocked by my &lt;code class=&quot;highlighter-rouge&quot;&gt;shouldComponentUpdate&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;h2 id=&quot;componentwillupdate&quot;&gt;componentWillUpdate&lt;/h2&gt;
+
+&lt;p&gt;Our next function, &lt;code class=&quot;highlighter-rouge&quot;&gt;componentWillUpdate&lt;/code&gt; is the last method called before a render takes place. This is our last opportunity to dispatch actions, so long as they do not attempt to push changes to our component state.&lt;/p&gt;
+
+&lt;h2 id=&quot;componentdidupdate&quot;&gt;componentDidUpdate&lt;/h2&gt;
+
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional resources:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/react-component.html&quot;&gt;React.Component Official Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/react-ecosystem/react-components-lifecycle-ce09239010df&quot;&gt;React Ecosystem&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jared Johnson</name></author><summary type="html">I’ve been building React projects for the last few weeks and I keep finding myself returning to the chart below (pulled from a lesson in the Learn.co curriculum). It summarizes the inputs and use cases for the four Component Lifecycle Methods related to rendering.</summary></entry><entry><title type="html">How I built my personal website</title><link href="http://localhost:4000/2017/07/22/how-i-built-my-website.html" rel="alternate" type="text/html" title="How I built my personal website" /><published>2017-07-22T00:00:00-04:00</published><updated>2017-07-22T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/22/how-i-built-my-website</id><content type="html" xml:base="http://localhost:4000/2017/07/22/how-i-built-my-website.html">&lt;p&gt;Last weekend, I decided to build my own personal website and I thought it would be a helpful resource to document the steps that I took to get &lt;a href=&quot;http://jared-johnson.com/&quot;&gt;jared-johnson.com&lt;/a&gt; up and running.&lt;/p&gt;
 
 &lt;h3 id=&quot;hosting-on-github-pages&quot;&gt;Hosting on Github Pages&lt;/h3&gt;
 
