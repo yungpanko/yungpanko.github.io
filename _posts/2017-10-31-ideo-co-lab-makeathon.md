@@ -40,6 +40,8 @@ By the end of the day, we were able to demo a functional prototype that would re
 
 Collecting information, and information from a child no less, is certainly sensitive and our team had multiple discussions on how our product would handle this responsibility. To address this, we made two key decisions. First, we decided that the product should not retain any information from the patients. Once the child is released from the hospital, the product should delete all information that it has collected. Second, we decided that the doctor is the only person who is able to see the data on the back-end and is only able to see the assumptions that the AI has made, not the raw data itself. Anything that the doctor would like to preserve, he or she must record that in the medical files manually.  
 
-I was extremely proud of what my team was able to accomplish in one day and had a blast working with such talented people. I would recommend future IDEO CoLab Makeathons to anyone interested in exploring emerging technologies and working on a team with incredibly talented people.
-
 ![prototype1](/assets/images/IDEO_prototype_with_google_home.jpg)*IDEOg at our demo*
+
+## Reflection
+
+I was extremely proud of what my team was able to accomplish in one day and had a blast working with my team. I was able to learn some of the frameworks used in human centered design, play around with new technologies, and try my best to answer really difficult questions about the role that these technologies should play in future society. I would recommend future IDEO CoLab Makeathons to anyone interested in exploring emerging technologies and working on a team with incredibly talented people from a cross-section of fields.
