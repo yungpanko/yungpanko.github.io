@@ -44,4 +44,4 @@ Collecting information, and information from a child no less, is certainly sensi
 
 ## Reflection
 
-I was extremely proud of what my team was able to accomplish in one day and had a blast working with my team. I was able to learn some of the frameworks used in human centered design, play around with new technologies, and try my best to answer really difficult questions about the role that these technologies should play in future society. I would recommend future IDEO CoLab Makeathons to anyone interested in exploring emerging technologies and working on a team with incredibly talented people from a cross-section of fields.
+I was extremely proud of what my team was able to accomplish in one day and had a blast working with them. I was able to learn some of the frameworks used in human centered design, play around with new technologies, and tried my best to answer really difficult questions about the role that these technologies should play in future society. I would recommend future IDEO CoLab Makeathons to anyone interested in exploring emerging technologies and working on a team with incredibly talented people from a cross-section of fields.
