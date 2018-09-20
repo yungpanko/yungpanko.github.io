@@ -52,7 +52,7 @@ environment within which that function was declared. (Mozilla Developer Network)
 
 <p>In my first example, I am declaring a variable, <em>name</em>, with the value of my name. Then, I am writing a function, <em>printName</em>, that console logs the name variable that I declared above it. If you test this out yourself, you will see that it works.</p>
 
-<p><img src="https://localhost:4000/assets/images/qbd1.png" alt="img1" /></p>
+<p><img src="http://localhost:4000/assets/images/qbd1.png" alt="img1" /></p>
 
 <p>It may seem obvious that this works but — look closely — we never called our <em>printName</em> function with an argument. What’s remarkable about what this function is doing is the very thing that makes it a closure. Our function was able to grab the name variable declared outside of itself, and within the global environment, to complete our operation.</p>
 
@@ -61,12 +61,12 @@ environment within which that function was declared. (Mozilla Developer Network)
 
 <p>I’m going to cover two examples where your newfound understanding of closures can help. The first is private methods. A private method in JavaScript is a function that can only be accessed through another function. A quick example is below.</p>
 
-<p><img src="https://localhost:4000/assets/images/qbd2.png" alt="img2" /></p>
+<p><img src="http://localhost:4000/assets/images/qbd2.png" alt="img2" /></p>
 
 <p>Here, I have defined a function, <em>publicFunction</em>, that returns another function, secretFunction. Both of these functions are closures, by definition, but only <em>publicFunction</em> can be readily called by itself. When we try to console log our <em>secretFunction</em>, we are told that it is not defined.
 In <em>publicFunction</em>, I have employed a syntax that will be familiar if you have dealt with objects in JavaScript. By writing the return for <em>publicFunction</em> as <em>“function name: function,”</em> or in module pattern, we are able to call the inner function by chaining our call, similar to how we would retrieve attributes from an object. Let’s see that in action.</p>
 
-<p><img src="https://localhost:4000/assets/images/qbd3.png" alt="img3" /></p>
+<p><img src="http://localhost:4000/assets/images/qbd3.png" alt="img3" /></p>
 
 <p>JavaScript’s use of closures allows us to hide our secretFunction from the rest of our global scope and even reuse the name in other functions.</p>
 
@@ -76,13 +76,13 @@ In <em>publicFunction</em>, I have employed a syntax that will be familiar if yo
 
 <p>Let’s examine the code below.</p>
 
-<p><img src="https://localhost:4000/assets/images/qbd4.png" alt="img4" /></p>
+<p><img src="http://localhost:4000/assets/images/qbd4.png" alt="img4" /></p>
 
 <p>Here, I am defining a function, <em>multiplyNumbers</em>, that accepts two numbers and returns their product. I have written this function to return another function in the case that it only receives one argument. This return function, or closure, can access the first variable that we gave our outer function, <em>multiplyNumbers</em>, and complete our operation. At the bottom of the screenshot, you can see that both ways (passing both arguments into the outer function AND passing the first argument to the outer function and the second to the inner function) return the same result.</p>
 
 <p>We can supply our outer function only one argument and name the resulting function (see below).</p>
 
-<p><img src="https://localhost:4000/assets/images/qbd5.png" alt="img5" /></p>
+<p><img src="http://localhost:4000/assets/images/qbd5.png" alt="img5" /></p>
 
 <p>I believe that the power of closures truly shines here. Our named methods, <em>multiplyByFive</em> and <em>multiplyByFour</em>, were birthed by the same function, <em>multiplyNumbers</em>. They only differ in the environment scope that they refer to. The first argument for <em>multiplyByFive</em> is still 5, even after the creation of an additional function, <em>multiplyByFour</em>, that takes in a different first argument. Pretty cool, right?</p>
 
@@ -111,7 +111,7 @@ In <em>publicFunction</em>, I have employed a syntax that will be familiar if yo
     <script src="/assets/js/scale.fix.js"></script>
 
 
-
+    
     <script>
       (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -128,7 +128,7 @@ In <em>publicFunction</em>, I have employed a syntax that will be familiar if yo
       ga('create', 'UA-103067234-1', 'auto');
       ga('send', 'pageview');
     </script>
-
+    
   </body>
 
 </html>
