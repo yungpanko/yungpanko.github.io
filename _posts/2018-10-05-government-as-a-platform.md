@@ -18,7 +18,7 @@ Massachusetts citizens should not have to face different user experiences across
 ![renew drivers license](/assets/images/drivers_license_GaaP.png)*Portal for renewing your drivers license*
 
 
-![jury duty](/assets/images/jury_duty_GaaP.png)*Portal for responding to jury duty*
+![jury duty](/assets/images/jury_duty_GaaP.png)*Portal for responding to jury duty. Completely Different Branding and experience!*
 
 It is not enough that we are offering these services online. We can make them cheaper, easier-to-build and easier for our citizens to use. This starts with making Mass.gov the single portal to all government hosted and supported services. Regardless of the department responsible for the content or application, a shared set of design principle should rule. Our citizens should recognize a familiar look and feel whenever using a Massachusetts digital service. 
 
