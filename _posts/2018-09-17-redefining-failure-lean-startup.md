@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Redefining Failure with The Lean Startup"
+title:  "digital HKS: Redefining Failure with The Lean Startup"
 date:   2018-09-17
 author: Jared Johnson
 ---
