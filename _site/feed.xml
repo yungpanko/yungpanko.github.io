@@ -1,5 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-02T12:16:19-04:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
-</subtitle><author><name>Jared Johnson</name></author><entry><title type="html">digital HKS: Location Services Are Tracking Your Every Move</title><link href="http://localhost:4000/2018/11/02/privacy-and-foursquare.html" rel="alternate" type="text/html" title="digital HKS: Location Services Are Tracking Your Every Move" /><published>2018-11-02T00:00:00-04:00</published><updated>2018-11-02T00:00:00-04:00</updated><id>http://localhost:4000/2018/11/02/privacy-and-foursquare</id><content type="html" xml:base="http://localhost:4000/2018/11/02/privacy-and-foursquare.html">&lt;p&gt;Back when I was working for J.P. Morgan, I used to help organize conferences that we put on for our financial advisor clients. Much of the content was macro insights from our chief economists but in the last few years, we started to talk about privacy and cyber security. The “aha moment” of our privacy session was always when our CTO would ask the audience to pull out their iPhones. Things have changed in iOS since then but in iOS 12, you can go to &lt;strong&gt;[“Settings” =&amp;gt; “Privacy” =&amp;gt; “Location Services” =&amp;gt; “System Services” =&amp;gt; “Significant Locations”]&lt;/strong&gt; to get to something that looks like this. &lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-21T16:13:52-05:00</updated><id>http://localhost:4000/</id><title type="html">Jared Johnson</title><subtitle>Tech and Public Policy are on a collision course. I'm working to mitigate the damage.
+</subtitle><author><name>Jared Johnson</name></author><entry><title type="html">digital HKS: Countering Misinformation in India</title><link href="http://localhost:4000/2018/11/21/misinformation-in-india.html" rel="alternate" type="text/html" title="digital HKS: Countering Misinformation in India" /><published>2018-11-21T00:00:00-05:00</published><updated>2018-11-21T00:00:00-05:00</updated><id>http://localhost:4000/2018/11/21/misinformation-in-india</id><content type="html" xml:base="http://localhost:4000/2018/11/21/misinformation-in-india.html">&lt;p&gt;Secretary Sawhney, &lt;/p&gt;
+
+&lt;p&gt;The situation in our country is worsening. Rumors spread through Facebook and WhatsApp have lead to the deaths of now more than 20 innocent people. To aid your response to this urgent matter, I have summarized your options. I should make clear my belief that our best response involves a combination of a social media campaign and engagement with Facebook. The other options, while effective in remedying the current situation, introduce structural risks to our ability to maintain democracy.&lt;/p&gt;
+
+&lt;p&gt;The threat posed by technologies such as WhatsApp and Facebook stretches beyond the present situation. Conflicts that would otherwise mature into civil unrest can instead turn massively violent. In &lt;a href=&quot;https://www.nytimes.com/2018/04/21/world/asia/facebook-sri-lanka-riots.html&quot;&gt;Sri Lanka&lt;/a&gt;, these apps were also at the center of riots and lynchings, with tensions exacerbated across ethnic and religious fault lines. Facebook failed to respond to government requests for intervention. Similar complaints about Facebook’s failure to intervene has arisen out of the situation in &lt;a href=&quot;https://www.nytimes.com/2018/10/15/technology/myanmar-facebook-genocide.html&quot;&gt;Myanmar&lt;/a&gt;. &lt;strong&gt;What we should gather is that this is not an issue that technology companies will solve for us.&lt;/strong&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;at-a-high-level-our-response-optionsare&quot;&gt;At a high level, our response options are:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;censorship&lt;/li&gt;
+  &lt;li&gt;surveillance &lt;/li&gt;
+  &lt;li&gt;a social media counter-campaign &lt;/li&gt;
+  &lt;li&gt;direct engagement with Facebook &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;censorship&quot;&gt;Censorship&lt;/h3&gt;
+
+&lt;p&gt;The western press has been critical of our use of &lt;a href=&quot;https://www.forbes.com/sites/meghabahree/2018/11/12/india-leads-the-world-in-the-number-of-internet-shutdowns-report/#46da1ca83cdb&quot;&gt;temporary internet shutdowns during peiods of unrest&lt;/a&gt;. At the same time, many of us in government see this as an effective tool at preventing the types of atrocities taking place in Myanmar. But while temporary shutdowns may seem extreme to some, we have resisted blocking access to Facebook altogether.&lt;/p&gt;
+
+&lt;p&gt;If we deem that these technologies pose more harm than benefit, it is within our authority to restrict access. Ideally, doing so would strengthen our media organizations, whose power to influence has fallen with the rise of social media. It is much easier to deal with untruths coming from a centralized media organization versus those on distributed social media platforms.&lt;/p&gt;
+
+&lt;p&gt;The downside to censorship is not only negativity from the western press. As was the &lt;a href=&quot;https://www.theguardian.com/world/2015/mar/24/india-supreme-court-strikes-down-internet-censorship-law&quot;&gt;case with rule 66A&lt;/a&gt;, this practice is likely to be challenged under freedom of speech laws. The courts may side with citizens arguing in favor of their rights to public outlets such as Facebook and WhatsApp. Even without a decisive opinion, we should expect a reaction from the public. It would not be difficult to imagine this reaction to be one of distrust and resentment. &lt;strong&gt;With public confidence being such a pillar to democracy, I cannot recommend undertaking such measures to censor these platforms altogether.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;surveillance&quot;&gt;Surveillance&lt;/h3&gt;
+
+&lt;p&gt;The velocity of information on social platforms is what makes these crises possible. Law enforcement is unable to preempt the organization of violent mobs. With better surveillance, we could keep forces current and increase our capacity to preserve peace.&lt;/p&gt;
+
+&lt;p&gt;Where censorship awakens the issue of freedom of speech, surveillance awakens the issue of privacy. Consider the nature of social media where communications can take the shape of large groups down to direct messaging. At the higher level, arguments likening groups to the public square can be applied to exempt from the breach of any privacy rights. But at the level of direct messaging, there is no way around the infringement on the rights of our citizens.&lt;/p&gt;
+
+&lt;h3 id=&quot;social-media-counter-campaign&quot;&gt;Social Media Counter-Campaign&lt;/h3&gt;
+
+&lt;p&gt;As I mentioned above, social media has weakened our media’s capacity to influence. Word-of-mouth and viral content are as more credible than mass media. Government could play a role in the information exchange that takes place online. Using these platforms to spread official government messages could help to mitigate the damage done by false narratives. &lt;/p&gt;
+
+&lt;p&gt;Instead of censoring or watching over social media, we can get involved. &lt;strong&gt;With our official government accounts, we can provide the public with the most up-to-date and accurate information that we have.&lt;/strong&gt; We can counter false narratives with active social media presence.&lt;/p&gt;
+
+&lt;p&gt;Embracing social media has the added benefit of sidestepping concerns of privacy and free speech. &lt;/p&gt;
+
+&lt;h3 id=&quot;direct-engagement-with-facebook&quot;&gt;Direct Engagement with Facebook&lt;/h3&gt;
+
+&lt;p&gt;The last strategy, and the strategy with the highest long-term potential, is partnering with the platforms. In the cases referenced at the top of this letter, this strategy failed. Facebook’s response to government requests was either inadequate or indifferent. &lt;strong&gt;Recognizing that scale is of interest to platforms like Facebook, the threat of censorship should bring them to the bargaining table.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Our asks should include more moderators in the range of languages native to our country, but also more fundamental changes to the platform itself. Most specific in my mind is countering the dynamics that allow dangerous messages to go viral. This could be done by giving more weight to updates from direct contacts and media organizations rather than popular messages from second or third party connections. The culmination of technical tweaks like this can, over the long run, yield social media platforms that work better for the people of India.&lt;/p&gt;
+
+&lt;p&gt;My recommendation is to focus on the latter two responses, whereby we can embrace these platforms and work directly with the companies to improve them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://projects.iq.harvard.edu/digitalhks/home&quot;&gt;Click here&lt;/a&gt; to learn more about digital HKS&lt;/p&gt;</content><author><name>Jared Johnson</name></author><summary type="html">Secretary Sawhney, </summary></entry><entry><title type="html">digital HKS: Location Services Are Tracking Your Every Move</title><link href="http://localhost:4000/2018/11/02/privacy-and-foursquare.html" rel="alternate" type="text/html" title="digital HKS: Location Services Are Tracking Your Every Move" /><published>2018-11-02T00:00:00-04:00</published><updated>2018-11-02T00:00:00-04:00</updated><id>http://localhost:4000/2018/11/02/privacy-and-foursquare</id><content type="html" xml:base="http://localhost:4000/2018/11/02/privacy-and-foursquare.html">&lt;p&gt;Back when I was working for J.P. Morgan, I used to help organize conferences that we put on for our financial advisor clients. Much of the content was macro insights from our chief economists but in the last few years, we started to talk about privacy and cyber security. The “aha moment” of our privacy session was always when our CTO would ask the audience to pull out their iPhones. Things have changed in iOS since then but in iOS 12, you can go to &lt;strong&gt;[“Settings” =&amp;gt; “Privacy” =&amp;gt; “Location Services” =&amp;gt; “System Services” =&amp;gt; “Significant Locations”]&lt;/strong&gt; to get to something that looks like this. &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/location-services.png&quot; alt=&quot;location-services&quot; /&gt;&lt;/p&gt;
 
@@ -582,73 +626,4 @@ In &lt;em&gt;publicFunction&lt;/em&gt;, I have employed a syntax that will be fa
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc&quot;&gt;JavaScript Modules: A Beginner’s Guide&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jared Johnson</name></author><summary type="html">functions in JavaScript form closures. A closure is the combination of a function and the lexical environment within which that function was declared. (Mozilla Developer Network)</summary></entry><entry><title type="html">4 things i learned toying around with nested resources in Rails</title><link href="http://localhost:4000/2017/06/13/4-things-i-learned-toying-around-with-nested-resources-in-rails.html" rel="alternate" type="text/html" title="4 things i learned toying around with nested resources in Rails" /><published>2017-06-13T20:19:00-04:00</published><updated>2017-06-13T20:19:00-04:00</updated><id>http://localhost:4000/2017/06/13/4-things-i-learned-toying-around-with-nested-resources-in-rails</id><content type="html" xml:base="http://localhost:4000/2017/06/13/4-things-i-learned-toying-around-with-nested-resources-in-rails.html">&lt;p&gt;Let’s table set — what is a nested resource?&lt;/p&gt;
-
-&lt;p&gt;I’m referring to a type of routing mechanism available to use in Ruby on Rails. The &lt;em&gt;‘resources’&lt;/em&gt; syntax is a useful way to have Rails generate each of the CRUD routes for you. Take a look below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested1.png&quot; alt=&quot;config/routes.rb in my rails application&quot; /&gt;
-&lt;em&gt;config/routes.rb in my rails application&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Here, in my &lt;em&gt;config/routes.rb&lt;/em&gt; file, I am using the &lt;em&gt;‘resources’&lt;/em&gt; keyword to draw routes for my &lt;em&gt;‘Artist’&lt;/em&gt; model. Now, when I run &lt;em&gt;‘rake routes,’&lt;/em&gt; I can see that the following routes have been generated for me.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested2.png&quot; alt=&quot;‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call&quot; /&gt;
-&lt;em&gt;‘rake routes’ returns the full list of rails routes to your terminal — ‘rake’ is a ruby gem that is required for this call&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;If i want to expand my model to include songs, I have some choices to make. I could have Rails generate a suite of routes beginning with &lt;em&gt;‘/songs’&lt;/em&gt; for me, just as I have done with artists OR I could choose to nest these routes underneath those that I have already drawn for artists. The latter would look like this.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested3.png&quot; alt=&quot;Here, I am passing my songs resources in as a block underneath ‘artists’&quot; /&gt;
-&lt;em&gt;Here, I am passing my songs resources in as a block underneath ‘artists’&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The nested approach provides me with the following list of routes.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested4.png&quot; alt=&quot;routes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And here lies the first thing that I learned about nested routes.&lt;/p&gt;
-
-&lt;h2 id=&quot;1-the-id-is-appended-with-the-name-of-previous-model-at-each-level-of-nesting&quot;&gt;#1 The :id is appended with the name of previous model at each level of nesting.&lt;/h2&gt;
-
-&lt;p&gt;My &lt;em&gt;‘/artists/:id’&lt;/em&gt; convention becomes &lt;em&gt;‘/artists/:artist_id/songs/:id’&lt;/em&gt; once I navigate into my song routes. Why is this syntax change important? Now when my application receives a request to any of the actions defined in my SongsController, an artist ID is passed to me in the format of &lt;em&gt;‘params[:artist_id].’&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;If I want my &lt;em&gt;songs#index&lt;/em&gt; action to display a collection of songs that belong to the artist that I am navigating under, I will need to pass &lt;em&gt;‘params[:artist_id]’&lt;/em&gt; in as an argument to stipulate that I only want songs from the artist who’s ID matches (see below).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested5.png&quot; alt=&quot;app/controllers/songs_controller.rb&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-the-form_for-rails-helper-method-requires-you-to-pass-in-an-object-for-each-level-of-nesting&quot;&gt;#2 The ‘form_for’ Rails helper method requires you to pass in an object for each level of nesting.&lt;/h2&gt;
-
-&lt;p&gt;Rails comes pre-loaded with a bunch of different useful helper methods, one of which is &lt;em&gt;‘form_for,’&lt;/em&gt; which assists with the routing for model-based form input.&lt;/p&gt;
-
-&lt;p&gt;Typically, I would use an instance of a model as the sole argument in a form. When we create a new song, with the models outlined earlier, what we are really doing is creating a new song object that belongs to an artist object. Therefore, without letting our &lt;em&gt;‘form_for’&lt;/em&gt; element which artist we want to relate the form input to as well as which song, our ‘form_for’ model will not work. An example of my form for creating a new song is below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested6.png&quot; alt=&quot;form_For&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-nesting-can-get-out-of-hand-very-quickly&quot;&gt;#3 Nesting can get out of hand very quickly&lt;/h2&gt;
-
-&lt;p&gt;Simple demonstration: I’m going to add resources for &lt;em&gt;‘lyrics’&lt;/em&gt; underneath my nested &lt;em&gt;‘songs’&lt;/em&gt; resources.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/nested7.png&quot; alt=&quot;yeah, there’s gotta be a better way&quot; /&gt;
-&lt;em&gt;yeah, there’s gotta be a better way&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4-nesting-best-practices&quot;&gt;#4 Nesting best practices&lt;/h2&gt;
-
-&lt;p&gt;From &lt;a href=&quot;http://weblog.jamisbuck.org/2007/2/5/nesting-resources&quot; title=&quot;Nesting resources&quot;&gt;Jamis Buck’s blog post&lt;/a&gt; (also referenced in the Rails guide):&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Resources should never be nested more than 1 level deep.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Buck’s blog post suggests an advanced method for keeping your routes and URLs from getting out of control but I wanted to highlight two quick ways that you can refactor your code.&lt;/p&gt;
-
-&lt;h3 id=&quot;shallow-nesting&quot;&gt;Shallow nesting&lt;/h3&gt;
-&lt;p&gt;Adding the &lt;em&gt;‘shallow: true’&lt;/em&gt; parameter to your nested resource will define routes at the base level, &lt;em&gt;‘/songs/’&lt;/em&gt;, for four of our RESTful routes — &lt;em&gt;show&lt;/em&gt;, &lt;em&gt;edit&lt;/em&gt;, &lt;em&gt;update&lt;/em&gt; and &lt;em&gt;destroy&lt;/em&gt;, while leaving the remaining routes — &lt;em&gt;index, new, create&lt;/em&gt;— at the nested level. So how is this useful to us?&lt;/p&gt;
-
-&lt;p&gt;In my model, with artists and songs, we are now able to use the routes starting with &lt;em&gt;‘/songs/:id’&lt;/em&gt; to view or modify existing songs on an individual basis. Recall that songs belong to artists, so upon creation, we still need to initialize a song with an artist relationship. However, once a song is created, it doesn’t matter to artist relationship if we would like to edit or delete it. And so, we don’t need to follow a lengthy route, such as &lt;em&gt;‘/artists/:artist_id/songs/:id/edit’&lt;/em&gt; to make our changes.&lt;/p&gt;
-
-&lt;h3 id=&quot;collectionmember-blocks&quot;&gt;Collection/Member blocks&lt;/h3&gt;
-
-&lt;p&gt;While it would not help to simplify my model, collection and member blocks can be used to create routes with specific dependencies.&lt;/p&gt;
-
-&lt;p&gt;Thank you for reading and be sure to check out the additional resources linked below.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://weblog.jamisbuck.org/2007/2/5/nesting-resources&quot; title=&quot;Nesting resources&quot;&gt;Nesting resources, http://weblog.jamisbuck.org/2007/2/5/nesting-resources&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2034700/form-for-with-nested-resources&quot;&gt;Form for with nested resources, https://stackoverflow.com/questions/2034700/form-for-with-nested-resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jared Johnson</name></author><summary type="html">Let’s table set — what is a nested resource?</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Jared Johnson</name></author><summary type="html">functions in JavaScript form closures. A closure is the combination of a function and the lexical environment within which that function was declared. (Mozilla Developer Network)</summary></entry></feed>
